@@ -99,19 +99,19 @@ module laws '../../shared/bicep/log-analytics-ws.bicep' = {
 
 
 @description('The Azure Firewall deployment. This would normally be already provisioned by your platform team.')
-module azfw './modules/firewall-basic.module.bicep' = {
-  name: take('afw-${deployment().name}', 64)
-  params: {
-    location: location
-    tags: tags
-    afwVNetName: vnetHub.outputs.vnetName
-    logAnalyticsWorkspaceId: laws.outputs.logAnalyticsWsId
-    firewallName: resourceNames.azFw
-    vnetSpokeAddressSpace: vnetSpokeAddressSpace
-    subnetSpokeDevOpsAddressSpace: subnetSpokeDevOpsAddressSpace
-    vnetHubAddressSpace: vnetHubAddressSpace
-  }
-}
+//module azfw './modules/firewall-basic.module.bicep' = {
+//  name: take('afw-${deployment().name}', 64)
+//  params: {
+//    location: location
+//    tags: tags
+//    afwVNetName: vnetHub.outputs.vnetName
+//    logAnalyticsWorkspaceId: laws.outputs.logAnalyticsWsId
+//    firewallName: resourceNames.azFw
+//    vnetSpokeAddressSpace: vnetSpokeAddressSpace
+//    subnetSpokeDevOpsAddressSpace: subnetSpokeDevOpsAddressSpace
+//    vnetHubAddressSpace: vnetHubAddressSpace
+//  }
+//}
 
 
 @description('Resource name of the hub vnet')
