@@ -182,21 +182,21 @@ resource spokeResourceGroup 'Microsoft.Resources/resourceGroups@2022-09-01' = {
 
 }
 
-module hub 'deploy.hub.bicep' =  if ( empty(vnetHubResourceId) ) {
-  scope: resourceGroup(hubResourceGroup.name)
-  name: take('hub-${deployment().name}-deployment', 64)
-  params: {
-    naming: naming.outputs.names
-    location: location
-    vnetHubAddressSpace: vnetHubAddressSpace
-    tags: tags
-    subnetHubBastionAddressSpace: subnetHubBastionAddressSpace
-    subnetHubFirewallAddressSpace: subnetHubFirewallAddressSpace
-    subnetHubFirewallManagementAddressSpace: subnetHubFirewallManagementAddressSpace
-    vnetSpokeAddressSpace: vnetSpokeAddressSpace
-    subnetSpokeDevOpsAddressSpace: subnetSpokeDevOpsAddressSpace
-  }
-}
+//module hub 'deploy.hub.bicep' =  if ( empty(vnetHubResourceId) ) {
+//  scope: resourceGroup(hubResourceGroup.name)
+//  name: take('hub-${deployment().name}-deployment', 64)
+//  params: {
+//    naming: naming.outputs.names
+//    location: location
+//    vnetHubAddressSpace: vnetHubAddressSpace
+//    tags: tags
+//    subnetHubBastionAddressSpace: subnetHubBastionAddressSpace
+//    subnetHubFirewallAddressSpace: subnetHubFirewallAddressSpace
+//    subnetHubFirewallManagementAddressSpace: subnetHubFirewallManagementAddressSpace
+//    vnetSpokeAddressSpace: vnetSpokeAddressSpace
+//    subnetSpokeDevOpsAddressSpace: subnetSpokeDevOpsAddressSpace
+//  }
+//}
 
 module spoke 'deploy.spoke.bicep' = {
   scope: resourceGroup(spokeResourceGroup.name)
