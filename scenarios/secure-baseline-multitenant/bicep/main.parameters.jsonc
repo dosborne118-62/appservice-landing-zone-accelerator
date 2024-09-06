@@ -21,10 +21,10 @@
         },
         //If vnetHubResourceId empty, this value is irrelevant. If vnetHubResourceId has value and we need UDR, then the internal IP of the azFW needs to be set. Otherwise no UDR will be created
         "firewallInternalIp": {
-            "value": "10.242.0.4"
+            "value": "10.222.0.4"
         },
         "vnetHubAddressSpace": {
-            "value": "10.242.0.0/20"
+            "value": "10.222.0.0/20"
         },
         // Feature Flags
         // set to true if you want to intercept all outbound traffic with azure firewall
@@ -57,15 +57,15 @@
         },
         // CIDR of the subnet that will host the azure Firewall
         "subnetHubFirewallAddressSpace": {
-            "value": "10.242.0.0/26"    // "10.242.0.0/26"
+            "value": "10.222.0.0/26"    // "10.222.0.0/26"
         },
         // CIDR to use for the AzureFirewallManagementSubnet, which is required by AzFW Basic
         "subnetHubFirewallManagementAddressSpace": {
-            "value": "10.242.0.64/26" // 
+            "value": "10.222.0.64/26" // 
         },
         // CIDR of the subnet that will host the Bastion Service
         "subnetHubBastionAddressSpace": {
-            "value": "10.242.0.128/26"  // "10.242.0.64/26"
+            "value": "10.222.0.128/26"  // "10.222.0.64/26"
         },
         //CIDR of the spoke vnet that will hold the app services plan and the rest supporting services (and their private endpoints)
         "vnetSpokeAddressSpace": {
