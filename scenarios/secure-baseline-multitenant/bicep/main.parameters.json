@@ -18,7 +18,7 @@
             "value": ""
         },
         "vnetHubAddressSpace": {
-            "value": "10.242.0.0/20"
+            "value": "10.222.0.0/20"
         },
         "enableEgressLockdown" : {
             "value": true
@@ -42,13 +42,13 @@
             "value": true
         },
         "subnetHubFirewallAddressSpace": {
-            "value": "10.242.0.0/26"
+            "value": "10.222.0.0/26"
         },
         "subnetHubFirewallManagementAddressSpace": {
-            "value": "10.242.0.64/26" 
+            "value": "10.222.0.64/26" 
         },
         "subnetHubBastionAddressSpace": {
-            "value": "10.242.0.128/26"
+            "value": "10.222.0.128/26"
         },
         "vnetSpokeAddressSpace": {
             "value": "10.240.0.0/20"
